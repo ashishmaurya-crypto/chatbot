@@ -18,14 +18,18 @@ const Header = () => {
 
     return (
         <>
-            {selected ?  <Chatbotfunx message={boxmessage}/> :
-                <div className="">
+            {selected ? <Chatbotfunx message={boxmessage} /> :
+                <>
                     <div className="header">
-                        <h1>IRIS</h1>
-                        <h3><b>Hello</b><span className="wave">👋</span></h3>
-                        <p><b>I am Iris, a Virtual Assistant</b><br /><b>How may I help you?</b></p>
+                        <div className="box-header">
+                            <h1>IRIS</h1>
+                            <h3><b>Hello</b><span className="wave">👋</span></h3>
+                            <p><b>I am Iris, a Virtual Assistant</b><br /><b>How may I help you?</b></p>
+                        </div>
+
                     </div>
                     <div className="box d-flex flex-column justify-content-center">
+                        <div className="circle"><i className='fas fa-robot fa-spin'></i></div>
                         <h4 className="d-flex">Frequenty Asked Questions <i className="fa fa-question-circle"></i></h4>
                         <div className="box1">
                             <button className="btn default d-flex" onClick={handleChange} value={"Can I redeem my FB before the original term?"}>
@@ -57,13 +61,13 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="circle"><i className='fas fa-robot fa-spin'></i></div>
 
 
-                </div>}
+
+                </>}
         </>
 
-      
+
 
 
 
